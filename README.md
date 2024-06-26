@@ -15,7 +15,7 @@ We will attempt to forecast the weather conditions in Seattle. We can find the d
 
 Looking through a CSV is very boring, but at the same time we should also know what kind of data we have at our disposal. 
 
-Ah, I know! I think Pandas has some kinds of functions to help out with that. Check out `pandas.Dataframe.info`.
+Ah, I know! I think Pandas has some kinds of functions to help out with that. Check out [`pandas.Dataframe.info`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.info.html).
 
 Now that I think of it, we should check if there are any null or duplicate rows in our dataset.
 
@@ -54,9 +54,9 @@ Now it's time for the interesting part: Can we properly predict the weather? To 
 
 The gist of it is pretty simple:
 - Have data
-- Split data into training and testing splits - usually we use 80% of the data for training and 20% of it for testing - Use the `train_test_split` method 
+- Split data into training and testing splits - usually we use 80% of the data for training and 20% of it for testing - Use the [`train_test_split`](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) method 
 - Choose a model! Any model! There are soooo many models! Choose the relevant features, fit the model and make the prediction.
-- Now what? Well...we test it! Some common prediction metrics are R2 score or Mean Squared error
+- Now what? Well...we test it! Some common prediction metrics are [R2 score](https://en.wikipedia.org/wiki/Coefficient_of_determination) or [Mean Squared error](https://en.wikipedia.org/wiki/Mean_squared_error)
 
 Let's juggle with a couple of concepts and variations:
 - Create a `LinearRegression` model(https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html) to predict the `temp_max` with a 80-20 split and compute the R2 score and MSE. How does it perform?
