@@ -70,6 +70,8 @@ Don't shy away from juggling with the parameters, like train-test splits or any 
 
 ### Stretch goals
 
+Okay, but can we actually see the future? Play with [lagged features]([url](https://scikit-learn.org/stable/auto_examples/applications/plot_time_series_lagged_features.html)) and predict the weather for the next week and the next month. Find a nice way to visualise this! 
+
 What about something...bigger...smarter...
 
 What about...deep learning.
