@@ -123,7 +123,7 @@ def lr_predictor_random_split(dataframe: pd.DataFrame):
 def lr_predictor_default_split(dataframe: pd.DataFrame):
 	dataframe = modify_dataframe(dataframe)
 
-	train, test = train_test_split(dataframe, test_size=0.9, train_size=0.1, shuffle=True)
+	train, test = train_test_split(dataframe, test_size=0.2, train_size=0.8, shuffle=True)
 
 	X_train, y_train = split_data(train)
 	X_test, y_test = split_data(test)
