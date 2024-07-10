@@ -38,5 +38,38 @@ Finally, after checking there are no duplicates, we know each day is accounted f
 
 # Part 2 - Plotted Dataset Analysis
 
+After a strictly numerical analysis, we turn to plots, and check data trends.
 
-![img.png](images/temp_max_histogram_10_bins.png)![img.png](images/temp_max_histogram_40_bins.png)![img.png](images/temp_max_facetgrid_lineplot.png)![img.png](images/precipitation_facetgrid_scatterplot.png)![img.png](images/weather_countplot.png)![img.png](images/weather_piechart.png)
+First things first we analyse a histogram of max temperatures to check how common it was during the given 4 years to reach each one.
+
+![Max Temp Histogram with 10 bins](images/temp_max_histogram_10_bins.png)
+![Max Temp Histogram with 40 bins](images/temp_max_histogram_40_bins.png)
+
+We have varied the number of bins to get a better grasp of the difference between a broader range of temperatures and a narrower one.
+
+We could use the broader range (10 bins) and compare it to certain climates and figure out in which climate we are most likely in.
+
+For example, the high amount of days between 5-25 degrees shows that it is an average temperature that **most likely** changes throughout the year, placing this country in a **temperate climate** (however, for precision a monthly temperature chart would be better)
+
+The stricter range gives us a closer look at which temperatures are most common since each bucket represents a degree.
+
+![Max Temp Lineplot by month for each year](images/temp_max_facetgrid_lineplot.png)
+
+Now that we can also see the monthly lineplot for each year's max temperature, we can see the similarity to the **temperate climate** and can more confidently trust our find.
+
+Other than geographical properties, this could also be a good representation of the temperatures you may expect if you were to go on vacation there and plenty of other useful situations.
+
+Next up, we may be interested in visualizing how much it rains in each month (and similarly we are provided with 4 graphs, one for each year)
+
+![Precipitation Scatterplot by month for each year](images/precipitation_facetgrid_scatterplot.png)
+
+Once again, we can use it both for geographical properties and personal endeavours and curiosities.
+
+What is particularly interesting to me about this graph is that visually, a correlation between rising temperatures and lower precipitation is apparent (the inverse as well, lower temperatures <=> more rain)
+
+Finally, we can also see which type of weather was most common throughout the 4 years we have data for:
+
+![Weather Countplot total](images/weather_countplot.png)
+![Weather Piechart total](images/weather_piechart.png)
+
+The countplot is particularly useful at seeing a number of times for which that weather happened, while the piechart shows the percentage of time it happened.
