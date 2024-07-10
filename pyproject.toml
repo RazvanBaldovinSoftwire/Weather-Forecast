@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "weatherforecast"
+name = "weather-forecast"
 version = "0.1.0"
 description = ""
 authors = ["SteMat <Stefan.Matei@softwire.com>"]
