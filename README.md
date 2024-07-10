@@ -66,9 +66,11 @@ Let's juggle with a couple of concepts and variations:
 
 - Create a `LinearSVR` model(https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVR.html#sklearn.svm.LinearSVR) with the first 1300 entries as training data and the rest as testing data. Compute the MSE and R2 and create a scatterplot that shows the actual values with blue and the predicted values with red. This time try for `temp_min`.
 
-Don't shy away from juggling with the parameters, like train-test splits or any other. Or feel free to experiment other models as well. Please document all the work done in hte investigation file and also add all the plots there. You can treat this exercise as a small research assignment!
+Don't shy away from juggling with the parameters, like train-test splits or any other. Or feel free to experiment other models as well. Please document all the work done in the investigation file and also add all the plots there. You can treat this exercise as a small research assignment!
 
 ### Stretch goals
+
+Okay, but can we actually see the future? Play with [lagged features]([url](https://scikit-learn.org/stable/auto_examples/applications/plot_time_series_lagged_features.html)) and predict the weather for the next week and the next month. Find a nice way to visualise this! 
 
 What about something...bigger...smarter...
 
