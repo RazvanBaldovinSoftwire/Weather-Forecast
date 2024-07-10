@@ -73,3 +73,68 @@ Finally, we can also see which type of weather was most common throughout the 4 
 ![Weather Piechart total](images/weather_piechart.png)
 
 The countplot is particularly useful at seeing a number of times for which that weather happened, while the piechart shows the percentage of time it happened.
+
+# Part 3 - Weather Prediction
+
+When it comes to predictions, there are a few things I've noticed while playing around.
+
+## Linear Regression with Default split (80% train, 20% test)
+
+The predictions were quite close to reality to the point where the worst error would be at most a couple of degrees, no particularly bad guesses.
+
+The first time around I ignored weather just to get the linear regression to work (strings are not numbers, what a surprise!)
+
+These are the results:
+
+```
+Mean Squared Error: 11.07220640293206
+r2 score: 0.7978053155720439
+```
+
+![Linear Regression with default split (without taking weather into account)](images/linear_regression_default_no_weather.png)
+
+Now after I got the regression to work, I turned the weather to numerical data (a simple association between weather and a number) and the result were better, however not noticeably better:
+
+```
+Mean Squared Error: 10.722358570486234
+r2 score: 0.8041940487210625
+```
+
+![Linear Regression with default split (with taking weather into account)](images/linear_regression_default_with_weather.png)
+
+## Linear Regression with Random splits
+
+This time around, when we attempt unorthodox splits, we can see why the previous values were sacred.
+
+As long as there is a sizeable amount of training data the errors aren't that bad:
+
+```
+train_split: 0.5499464158218942
+test_split: 0.4500535841781058
+Mean Squared Error: 10.89650318995168
+r2 score: 0.7945382707024315
+```
+
+![Linear Regression with random split](images/linear_regression_random_split.png)
+
+However, an insane split (0.2% training and 99.8% testing) will yield...... insane results (who would've thought):
+
+```
+train_split: 0.0020383326075384955
+test_split: 0.9979616673924615
+Mean Squared Error: 282.4319822424254
+r2 score: -4.248233600418152
+```
+
+![Linear Regression with TERRIBLE split](images/linear_regression_with_very_bad_split.png)
+
+## SVR with default split
+
+Personally, with the limited interaction I've had with this regression, I cannot see much of a difference since the predictions are more or less the same.
+
+```
+Mean Squared Error: 11.772992559129934
+r2 score: 0.7850079353076742
+```
+
+![SVR](images/svr.png)
