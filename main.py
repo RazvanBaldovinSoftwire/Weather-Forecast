@@ -65,6 +65,7 @@ def weather_countplot(dataframe: pd.DataFrame):
     """
     graph = sns.countplot(data=dataframe, x="weather")
     graph.set(xlabel="Weather", ylabel="Count")
+    graph.bar_label(graph.containers[0], label_type='edge')
     plt.title("Weather Countplot")
     plt.show()
 
@@ -94,11 +95,11 @@ def svr_predictor_default_split(dataframe: pd.DataFrame):
 def main():
     df = pd.read_csv('seattle-weather.csv')
     dataset_info(df)
-    # temp_max_histplot(df)
-    # temp_max_facegrid_lineplot(df)
-    # precipitation_facegrid_scatterplot(df)
-    # weather_countplot(df)
-    # weather_piechart(df)
+    temp_max_histplot(df)
+    temp_max_facegrid_lineplot(df)
+    precipitation_facegrid_scatterplot(df)
+    weather_countplot(df)
+    weather_piechart(df)
 
 if __name__ == '__main__':
     main()
